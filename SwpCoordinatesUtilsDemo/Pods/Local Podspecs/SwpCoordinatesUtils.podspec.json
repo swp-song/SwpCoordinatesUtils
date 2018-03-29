@@ -1,0 +1,26 @@
+{
+  "name": "SwpCoordinatesUtils",
+  "version": "0.0.1",
+  "summary": "坐标转工具",
+  "description": "TODO: 坐标转工具",
+  "homepage": "https://github.com/swp-song/SwpCoordinatesUtils",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    " swp_song": "email@address.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/swp-song/SwpCoordinatesUtils.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "SwpCoordinatesUtils",
+    "SwpCoordinatesUtils/**/*.{h,m}"
+  ],
+  "requires_arc": true
+}
