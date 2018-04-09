@@ -12,6 +12,30 @@
 
 @implementation SwpCoordinatesUtils
 
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpCoordinatesUtilsInfo ( 获取 SwpCoordinatesUtils 信息 )
+ *
+ *  @return NSDictionary
+ */
++ (NSDictionary *)swpCoordinatesUtilsInfo {
+    return [NSDictionary dictionaryWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"SwpCoordinatesUtils.bundle/SwpCoordinatesUtils.plist" ofType:nil]].copy;
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpCoordinatesUtilsVersion  ( 获取 SwpCoordinatesUtils 版本号 )
+ *
+ *  @return NSString
+ */
++ (NSString *)swpCoordinatesUtilsVersion {
+    return [self.class swpCoordinatesUtilsInfo][@"Version"];
+}
+
 /**
  *  @author swp_song
  *

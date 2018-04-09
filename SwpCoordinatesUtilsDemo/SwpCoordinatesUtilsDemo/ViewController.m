@@ -22,8 +22,13 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    // http://lbs.amap.com/console/show/picker              高德
-    // http://api.map.baidu.com/lbsapi/getpoint/index.html  百度
+    
+    
+    NSLog(@"swpCoordinatesUtilsInfo     = %@", [SwpCoordinatesUtils swpCoordinatesUtilsInfo]);
+    NSLog(@"swpCoordinatesUtilsVersion  = %@", [SwpCoordinatesUtils swpCoordinatesUtilsVersion]);
+    
+    // http://lbs.amap.com/console/show/picker              高德坐标拾取器
+    // http://api.map.baidu.com/lbsapi/getpoint/index.html  百度坐标拾取器
     {
         SwpCoordinates GCJ02_0  = SwpCoordinateUtilsBD09ToGCJ02(39.91512, 116.403967);
         NSLog(@"%f,%f", GCJ02_0.longitude, GCJ02_0.latitude);
@@ -37,9 +42,9 @@
         NSLog(@"GCJ020Meta  : %lf,%lf", GCJ020Meta.longitude, GCJ020Meta.latitude);
         SwpCoordinates  WGS84_1     = SwpCoordinateUtilsGCJ02ToWGS84(GCJ020Meta.latitude, GCJ020Meta.longitude);
         NSLog(@"WGS840_1    : %f,%f", WGS84_1.longitude, WGS84_1.latitude);
-        SwpCoordinates  GCJ020_1    = SwpCoordinateUtilsWGS84ToGCJ02(WGS84_1.latitude, WGS84_1.longitude);
-        NSLog(@"GCJ020_1    : %f,%f", GCJ020_1.longitude, GCJ020_1.latitude);
-        SwpCoordinates  BD090_1     = SwpCoordinateUtilsGCJ02ToBD09(GCJ020_1.latitude, GCJ020_1.longitude);
+        SwpCoordinates  GCJ02_1    = SwpCoordinateUtilsWGS84ToGCJ02(WGS84_1.latitude, WGS84_1.longitude);
+        NSLog(@"GCJ020_1    : %f,%f", GCJ02_1.longitude, GCJ02_1.latitude);
+        SwpCoordinates  BD090_1     = SwpCoordinateUtilsGCJ02ToBD09(GCJ02_1.latitude, GCJ02_1.longitude);
         NSLog(@"BD090_1     : %f,%f", BD090_1.longitude, BD090_1.latitude);
         SwpCoordinates  WGS84_2     = SwpCoordinateUtilsBD09ToWGS84(BD090_1.latitude, BD090_1.longitude);
         NSLog(@"WGS84_2     : %f,%f", WGS84_2.longitude, WGS84_2.latitude);

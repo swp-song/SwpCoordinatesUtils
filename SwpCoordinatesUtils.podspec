@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwpCoordinatesUtils'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = ' 坐标转换工具 '
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,9 @@ TODO: 坐标转换工具
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwpCoordinatesUtils/**/*.{h,m}'
+  s.source_files          = 'SwpCoordinatesUtils/Class/**/*.{h,m}'
+  s.resource              = 'SwpCoordinatesUtils/Resources/SwpCoordinatesUtils.bundle'
+  s.requires_arc          = true
 
   # s.resource_bundles = {
   #   'SwpCoordinatesUtils' => ['SwpCoordinatesUtils/Assets/*.png']
@@ -40,6 +42,6 @@ TODO: 坐标转换工具
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
-  s.requires_arc = true
+
 
 end

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 /** 定义 定位 数据变量 */
@@ -27,6 +26,27 @@ struct SwpCoordinates {
 typedef struct SwpCoordinates SwpCoordinates;
 
 @interface SwpCoordinatesUtils : NSObject
+
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpCoordinatesUtilsInfo ( 获取 SwpCoordinatesUtils 信息 )
+ *
+ *  @return NSDictionary
+ */
++ (NSDictionary *)swpCoordinatesUtilsInfo;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpCoordinatesUtilsVersion  ( 获取 SwpCoordinatesUtils 版本号 )
+ *
+ *  @return NSString
+ */
++ (NSString *)swpCoordinatesUtilsVersion;
+
 
 /**
  *  @author swp_song
