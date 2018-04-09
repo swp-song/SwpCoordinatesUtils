@@ -1,6 +1,6 @@
 {
   "name": "SwpCoordinatesUtils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "summary": "坐标转换工具",
   "description": "TODO: 坐标转换工具",
   "homepage": "https://github.com/swp-song/SwpCoordinatesUtils",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/swp-song/SwpCoordinatesUtils.git",
-    "tag": "1.1.0"
+    "tag": "1.1.1"
   },
   "platforms": {
     "ios": "8.0"

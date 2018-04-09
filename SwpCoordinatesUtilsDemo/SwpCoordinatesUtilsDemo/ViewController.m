@@ -31,27 +31,26 @@
     // http://api.map.baidu.com/lbsapi/getpoint/index.html  百度坐标拾取器
     {
         SwpCoordinates GCJ02_0  = SwpCoordinateUtilsBD09ToGCJ02(39.91512, 116.403967);
-        NSLog(@"%f,%f", GCJ02_0.longitude, GCJ02_0.latitude);
+        NSLog(@"GCJ02_0 = %@,%@", @(GCJ02_0.longitude), @(GCJ02_0.latitude));
         SwpCoordinates BD09_0   = SwpCoordinateUtilsGCJ02ToBD09(GCJ02_0.latitude, GCJ02_0.longitude);
-        NSLog(@"%f,%f", BD09_0.longitude, BD09_0.latitude);
+        NSLog(@"GCJ02_0 = %@,%@", @(BD09_0.longitude), @(BD09_0.latitude));
     }
     
     {
         //  定位地点是北京天安门，定位转换会出现误差
         SwpCoordinates   GCJ020Meta = SwpCoordinateMake(39.908725, 116.397516);
-        NSLog(@"GCJ020Meta  : %lf,%lf", GCJ020Meta.longitude, GCJ020Meta.latitude);
+        NSLog(@"GCJ020Meta  = %@,%@", @(GCJ020Meta.longitude), @(GCJ020Meta.latitude));
         SwpCoordinates  WGS84_1     = SwpCoordinateUtilsGCJ02ToWGS84(GCJ020Meta.latitude, GCJ020Meta.longitude);
-        NSLog(@"WGS840_1    : %f,%f", WGS84_1.longitude, WGS84_1.latitude);
-        SwpCoordinates  GCJ02_1    = SwpCoordinateUtilsWGS84ToGCJ02(WGS84_1.latitude, WGS84_1.longitude);
-        NSLog(@"GCJ020_1    : %f,%f", GCJ02_1.longitude, GCJ02_1.latitude);
+        NSLog(@"WGS84_1     = %@,%@", @(WGS84_1.longitude), @(WGS84_1.latitude));
+        SwpCoordinates  GCJ02_1     = SwpCoordinateUtilsWGS84ToGCJ02(WGS84_1.latitude, WGS84_1.longitude);
+        NSLog(@"GCJ02_1     = %@,%@", @(GCJ02_1.longitude), @(GCJ02_1.latitude));
         SwpCoordinates  BD090_1     = SwpCoordinateUtilsGCJ02ToBD09(GCJ02_1.latitude, GCJ02_1.longitude);
-        NSLog(@"BD090_1     : %f,%f", BD090_1.longitude, BD090_1.latitude);
+        NSLog(@"BD090_1     = %@,%@", @(BD090_1.longitude), @(BD090_1.latitude));
         SwpCoordinates  WGS84_2     = SwpCoordinateUtilsBD09ToWGS84(BD090_1.latitude, BD090_1.longitude);
-        NSLog(@"WGS84_2     : %f,%f", WGS84_2.longitude, WGS84_2.latitude);
+        NSLog(@"WGS84_2     = %@,%@", @(WGS84_2.longitude), @(WGS84_2.latitude));
         SwpCoordinates  BD09_2      = SwpCoordinateUtilsWGS84ToBD09(WGS84_2.latitude, WGS84_2.longitude);
-        NSLog(@"BD09_2      : %f,%f", BD09_2.longitude, BD09_2.latitude);
+        NSLog(@"BD09_2      = %@,%@", @(BD09_2.longitude), @(BD09_2.latitude));
     }
-    
     
 }
 
